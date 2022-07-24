@@ -1,0 +1,27 @@
+.page-header {
+  &__container {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      //justify-content: space-between;
+      border-bottom: solid 1px #ececec;
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include flexCentered();
+      border-bottom: solid 1px #ececec;
+    }
+  }
+
+  &__logo {
+    color: var(--title-text-color);
+    text-align: left;
+    margin-right: 88px;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
+  }
+}

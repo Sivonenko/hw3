@@ -1,0 +1,48 @@
+.filter__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 8px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    @include flexCentered;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    @include flexCentered;
+  }
+}
+
+.filter__button {
+  color: var(--title-text-color);
+  background-color: #f5f4fa;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  display: inline-block;
+  padding: 6px 22px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--accent,
+  &:focus,
+  &:hover {
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+  }
+  &--accent {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+}

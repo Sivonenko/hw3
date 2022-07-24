@@ -1,0 +1,41 @@
+.social-networks {
+  @include flexCentered;
+  padding: 0;
+
+  &__list:not(:last-child) {
+    @extend %list;
+    margin-right: 10px;
+  }
+
+  &__icon--inherit {
+    fill: currentColor;
+  }
+}
+
+.social-networks__link {
+  @include flexCentered;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+
+  &--trans {
+    fill: #afb1b8;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &--trans:focus,
+  &--trans:hover {
+    fill: var(--primary-bg-color);
+  }
+
+  &--backg {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary-bg-color);
+  }
+}
